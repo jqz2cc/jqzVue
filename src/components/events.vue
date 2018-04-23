@@ -14,24 +14,23 @@
 </template>
 
 <script>
-  export default {
-    name: 'Events',
-    data() {
-      return {
-
-      }
+export default {
+  name: 'Events',
+  data() {
+    return {
+    }
+  },
+  methods: {
+    warn(message, event) {
+      if (event) event.preventDefault();
+      alert(message)
     },
-    methods:{
-      warn: function (message, event) {
-        if(event) event.preventDefault();
-        alert(message)
-      },
-      dothis(event){
-        event.preventDefault();
-        alert('this is events');
-      },
+    dothis(event) {
+      event.preventDefault();
+      alert('this is events');
     },
-  }
+  },
+}
 </script>
 
 <style lang="scss" type="text/scss" scoped>

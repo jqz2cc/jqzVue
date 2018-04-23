@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Test from '@/components/Test'
 import Events from '@/components/Events'
 import Input from '@/components/Input'
+import Transition from '@/components/Transition'
 
 Vue.use(Router)
 
@@ -29,5 +30,10 @@ export default new Router({
       name: 'Input',
       component: Input,
     },
+    {
+      path: '/transition',
+      name: 'Transition',
+      component: Transition,
+    }
   ],
 })

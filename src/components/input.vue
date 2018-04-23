@@ -48,24 +48,36 @@
         <br>
         <span>Selected: {{selected1}}</span>
       </div>
+      <div class="sub-title">单选按钮</div>
+      <input type="radio" v-model="pick" v-bind:value="a">
+      <br>
+       <span>value : {{pick}}</span>
+      <div class="sub-title">选择框的选项</div>
+      <select name="" v-model="selected2" >
+        <option :value="{number: 123}">123</option>
+      </select>
+      <br>
+      <span>{{selected2.number}}</span>
     </div>
 </template>
 
 <script>
-  export default {
-    name: 'Input',
-    data() {
-      return {
-        message: '',
-        message1: '',
-        checked: Boolean,
-        checkedNames:[ ],
-        picked: '',
-        selected: '',
-        selected1: [ ],
-      }
-    },
-  }
+export default {
+  name: 'Input',
+  data() {
+    return {
+      message: '',
+      message1: '',
+      checked: Boolean,
+      checkedNames:[ ],
+      picked: '',
+      selected: '',
+      selected1: [ ],
+      selected2: '',
+      pick: '',
+    }
+  },
+}
 </script>
 
 <style lang="scss" type="text/scss" scoped>
@@ -81,6 +93,7 @@
       position: relative;
       padding-left: 20px;
       margin-top: 20px;
+      margin-bottom: 10px;
       &:before{
         content: '';
         display: inline-block;
